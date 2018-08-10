@@ -14,12 +14,12 @@ public class OperationsWithIPTest{
 	private static OperationsWithIP operationsWithIP;
 
 	@Before
-	public static void initOperationWithIP(){
+	public void initOperationWithIP(){
 		operationsWithIP = new OperationsWithIP();
 	}
 
 	@After
-	public static void clearOperationsWithIP(){
+	public void clearOperationsWithIP(){
 		operationsWithIP = null;
 	}
 
@@ -30,7 +30,8 @@ public class OperationsWithIPTest{
 		assertEquals("ip to long:", expected, actual);
 	}
 
-	@Test void longToIpTest(){
+	@Test 
+	public void longToIpTest(){
 		String expected = "192.168.0.5";
 		String actual = operationsWithIP.longToIp(3232235525L);
 		assertEquals("long to ip:", expected, actual);
